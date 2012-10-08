@@ -1,4 +1,2 @@
 #!/bin/bash
-READER=$( /usr/bin/xdotool search --name --any 2nd)
-#echo $READER
-xdotool key --window $READER --clearmodifiers "ctrl+alt+c"
+xdotool key --window $( xdotool search --limit 1 --all --pid $( pgrep balabolka ) --name Balabolka ) "ctrl+alt+c"
